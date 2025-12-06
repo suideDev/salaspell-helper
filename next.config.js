@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/DNDSpellList' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/DNDSpellList' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/salaspell-helper' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/salaspell-helper' : '',
 }
 
 module.exports = nextConfig
