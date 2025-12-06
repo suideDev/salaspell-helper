@@ -34,21 +34,22 @@ export default function PasswordProtection({ children }: { children: React.React
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-white text-xl">Loading...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-950 via-red-950 to-amber-900">
+        <div className="text-dnd-gold text-xl font-cinzel">Loading...</div>
       </div>
     )
   }
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="bg-slate-800 p-8 rounded-lg shadow-2xl w-full max-w-md border border-purple-500">
-          <h1 className="text-3xl font-bold text-center mb-6 text-white">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-950 via-red-950 to-amber-900 p-4">
+        <div className="parchment scroll-border rounded-lg p-8 shadow-2xl w-full max-w-md">
+          <h1 className="text-4xl font-cinzel font-bold text-center mb-4 text-dnd-red text-shadow-medieval">
             SalaSpell Helper
           </h1>
-          <p className="text-center text-gray-300 mb-6">
-            Please enter the password to access the spell list
+          <div className="w-24 h-1 bg-dnd-red mx-auto mb-6"></div>
+          <p className="text-center font-medieval text-amber-900 mb-6 text-lg">
+            Enter the password to access the arcane tome
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -57,18 +58,18 @@ export default function PasswordProtection({ children }: { children: React.React
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                className="w-full px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-3 rounded-lg bg-parchment-old text-amber-900 placeholder-amber-700 border-2 border-dnd-brown focus:border-dnd-red focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
                 autoFocus
               />
             </div>
             {error && (
-              <div className="text-red-400 text-sm text-center">{error}</div>
+              <div className="text-dnd-red text-sm text-center font-medieval font-semibold">{error}</div>
             )}
             <button
               type="submit"
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200"
+              className="w-full bg-dnd-red hover:bg-red-900 text-dnd-gold font-cinzel font-bold py-3 rounded-lg transition-colors duration-200 border-2 border-dnd-brown shadow-lg hover:shadow-xl"
             >
-              Enter
+              Enter the Tome
             </button>
           </form>
         </div>

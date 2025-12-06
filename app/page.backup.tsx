@@ -106,21 +106,24 @@ export default function Home() {
 
   return (
     <PasswordProtection>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-amber-950 via-red-950 to-amber-900">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold text-white mb-2">
-              SalaSpell Helper
-            </h1>
-            <p className="text-gray-300">
-              Filter and discover spells by class, level, and source books
-            </p>
+            <div className="parchment scroll-border rounded-lg p-6 inline-block transform rotate-[-0.5deg]">
+              <h1 className="text-5xl font-cinzel font-bold text-dnd-red mb-2 text-shadow-medieval">
+                SalaSpell Helper
+              </h1>
+              <div className="w-32 h-1 bg-dnd-red mx-auto mb-2"></div>
+              <p className="font-medieval text-amber-900 text-lg">
+                Filter and discover spells by class, level, and source books
+              </p>
+            </div>
           </div>
 
           {loading ? (
-            <div className="text-center text-white text-xl py-20">
-              Loading spells...
+            <div className="text-center text-dnd-gold text-xl py-20 font-cinzel">
+              Loading spells from the arcane tome...
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -146,7 +149,7 @@ export default function Home() {
                     placeholder="Search spells by name, description, or school..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 border border-slate-700 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-4 py-3 rounded-lg bg-parchment-old text-amber-900 placeholder-amber-700 border-2 border-dnd-brown focus:border-dnd-red focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
                   />
                 </div>
 
@@ -154,12 +157,12 @@ export default function Home() {
                 {showRecommended && selectedClass && recommendedSpells.length > 0 && (
                   <div className="mb-8">
                     <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-2xl font-bold text-white">
+                      <h2 className="text-3xl font-cinzel font-bold text-dnd-gold text-shadow-medieval">
                         Recommended Spells
                       </h2>
                       <button
                         onClick={() => setShowRecommended(false)}
-                        className="text-sm text-gray-400 hover:text-white"
+                        className="text-sm font-medieval text-amber-200 hover:text-dnd-gold transition-colors"
                       >
                         Hide
                       </button>
@@ -178,13 +181,13 @@ export default function Home() {
 
                 {/* All Spells */}
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-white">
+                  <h2 className="text-3xl font-cinzel font-bold text-dnd-gold text-shadow-medieval">
                     All Spells ({filteredSpells.length})
                   </h2>
                   {!showRecommended && selectedClass && (
                     <button
                       onClick={() => setShowRecommended(true)}
-                      className="text-sm text-purple-400 hover:text-purple-300"
+                      className="text-sm font-medieval text-dnd-gold hover:text-yellow-300 transition-colors"
                     >
                       Show Recommendations
                     </button>
@@ -192,7 +195,7 @@ export default function Home() {
                 </div>
 
                 {filteredSpells.length === 0 ? (
-                  <div className="text-center text-gray-400 py-20">
+                  <div className="text-center text-amber-200 py-20 font-medieval text-lg">
                     No spells found matching your criteria.
                   </div>
                 ) : (
