@@ -25,9 +25,6 @@ export default function Home() {
               SalaSpell Helper
             </h1>
             <div className="w-32 h-1 bg-dnd-gold mx-auto mb-6"></div>
-            <p className="text-2xl font-medieval text-dnd-gold">
-              A Tome of Arcane Knowledge
-            </p>
           </div>
           
           <div className="parchment scroll-border rounded-lg p-8 transform rotate-[0.5deg]">
