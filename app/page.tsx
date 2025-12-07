@@ -29,7 +29,7 @@ export default function Home() {
           
           <div className="parchment scroll-border rounded-lg p-8 transform rotate-[0.5deg]">
             <p className="text-xl font-cinzel text-dnd-gold">
-              Filter and discover spells by class, level, and source books
+              A hopefully helpful guide to DND spells
             </p>
           </div>
         </div>

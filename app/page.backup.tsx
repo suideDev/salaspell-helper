@@ -116,7 +116,7 @@ export default function Home() {
               </h1>
               <div className="w-32 h-1 bg-dnd-gold mx-auto mb-2"></div>
               <p className="font-medieval text-dnd-gold text-lg">
-                Filter and discover spells by class, level, and source books
+                A hopefully helpful guide to DND spells
               </p>
             </div>
           </div>
