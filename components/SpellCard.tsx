@@ -17,14 +17,14 @@ export default function SpellCard({ spell, isRecommended }: SpellCardProps) {
     }`}>
       {isRecommended && (
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-xs font-cinzel font-bold text-dnd-gold bg-dnd-gold/20 px-3 py-1 rounded border border-amber-800">
+          <span className="text-xs font-cinzel font-bold text-ink-gold bg-dnd-gold/20 px-3 py-1 rounded border border-amber-800">
             ⭐ RECOMMENDED
           </span>
         </div>
       )}
       
       <div className="flex justify-between items-start mb-4 border-b-2 border-amber-800 pb-3">
-        <h3 className="text-2xl font-cinzel font-bold text-dnd-gold">{spell.name}</h3>
+        <h3 className="text-2xl font-cinzel font-bold text-ink-gold">{spell.name}</h3>
         <div className="text-right">
           <div className="text-sm font-cinzel font-semibold text-amber-300">{levelDisplay}</div>
           <div className="text-xs font-medieval text-amber-400 italic">{schoolName}</div>
@@ -58,16 +58,16 @@ export default function SpellCard({ spell, isRecommended }: SpellCardProps) {
 
       <div className="grid grid-cols-2 gap-3 text-xs font-medieval text-amber-200 border-t-2 border-amber-800 pt-3">
         <div>
-          <span className="font-cinzel font-semibold text-dnd-gold">Casting Time:</span> {spell.casting_time}
+          <span className="font-cinzel font-semibold text-ink-gold-soft">Casting Time:</span> {spell.casting_time}
         </div>
         <div>
-          <span className="font-cinzel font-semibold text-dnd-gold">Range:</span> {spell.range}
+          <span className="font-cinzel font-semibold text-ink-gold-soft">Range:</span> {spell.range}
         </div>
         <div>
-          <span className="font-cinzel font-semibold text-dnd-gold">Duration:</span> {spell.duration}
+          <span className="font-cinzel font-semibold text-ink-gold-soft">Duration:</span> {spell.duration}
         </div>
         <div>
-          <span className="font-cinzel font-semibold text-dnd-gold">Components:</span> {spell.components.join(', ')}
+          <span className="font-cinzel font-semibold text-ink-gold-soft">Components:</span> {spell.components.join(', ')}
         </div>
       </div>
     </div>

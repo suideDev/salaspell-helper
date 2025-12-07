@@ -106,23 +106,23 @@ export default function Home() {
 
   return (
     <PasswordProtection>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-black paper-texture">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
           <div className="text-center mb-8">
             <div className="parchment scroll-border rounded-lg p-6 inline-block transform rotate-[-0.5deg]">
-              <h1 className="text-5xl font-cinzel font-bold text-dnd-gold mb-2 text-shadow-medieval">
+              <h1 className="text-5xl font-cinzel font-bold text-ink-gold mb-2 text-shadow-medieval">
                 SalaSpell Helper
               </h1>
               <div className="w-32 h-1 bg-dnd-gold mx-auto mb-2"></div>
-              <p className="font-medieval text-dnd-gold text-lg">
+              <p className="font-medieval text-ink-gold-soft text-lg">
                 Filter and discover spells by class, level, and source books
               </p>
             </div>
           </div>
 
           {loading ? (
-            <div className="text-center text-dnd-gold text-xl py-20 font-cinzel">
+            <div className="text-center text-ink-gold text-xl py-20 font-cinzel">
               Loading spells from the arcane tome...
             </div>
           ) : (
@@ -157,12 +157,12 @@ export default function Home() {
                 {showRecommended && selectedClass && recommendedSpells.length > 0 && (
                   <div className="mb-8">
                     <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-3xl font-cinzel font-bold text-dnd-gold text-shadow-medieval">
+                      <h2 className="text-3xl font-cinzel font-bold text-ink-gold text-shadow-medieval">
                         Recommended Spells
                       </h2>
                       <button
                         onClick={() => setShowRecommended(false)}
-                        className="text-sm font-medieval text-amber-300 hover:text-dnd-gold transition-colors"
+                        className="text-sm font-medieval text-amber-300 hover:text-ink-gold transition-colors"
                       >
                         Hide
                       </button>
@@ -181,13 +181,13 @@ export default function Home() {
 
                 {/* All Spells */}
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-3xl font-cinzel font-bold text-dnd-gold text-shadow-medieval">
+                  <h2 className="text-3xl font-cinzel font-bold text-ink-gold text-shadow-medieval">
                     All Spells ({filteredSpells.length})
                   </h2>
                   {!showRecommended && selectedClass && (
                     <button
                       onClick={() => setShowRecommended(true)}
-                      className="text-sm font-medieval text-dnd-gold hover:text-yellow-300 transition-colors"
+                      className="text-sm font-medieval text-ink-gold hover:text-yellow-300 transition-colors"
                     >
                       Show Recommendations
                     </button>

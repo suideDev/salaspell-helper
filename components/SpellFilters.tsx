@@ -23,7 +23,7 @@ export default function SpellFilters({
 }: SpellFiltersProps) {
   return (
     <div className="parchment scroll-border rounded-lg p-6 space-y-6">
-      <h2 className="text-2xl font-cinzel font-bold text-dnd-gold mb-4 text-center border-b-2 border-amber-800 pb-2">
+      <h2 className="text-2xl font-cinzel font-bold text-ink-gold mb-4 text-center border-b-2 border-amber-800 pb-2">
         Filter Spells
       </h2>
       
