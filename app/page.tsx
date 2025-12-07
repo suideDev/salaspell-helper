@@ -7,7 +7,7 @@ export default function Home() {
   const [selectedClass, setSelectedClass] = useState('')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-black relative overflow-hidden paper-texture">
+    <div className="min-h-screen bg-black relative overflow-hidden paper-texture">
       {/* Class Selector Tabs */}
       <ClassSelector selectedClass={selectedClass} onClassChange={setSelectedClass} />
       
@@ -21,14 +21,14 @@ export default function Home() {
       <div className="relative z-10 flex items-center justify-center min-h-screen p-8" style={{ zIndex: 2 }}>
         <div className="text-center max-w-4xl">
           <div className="parchment scroll-border rounded-lg p-12 mb-8 transform rotate-[-0.5deg]">
-            <h1 className="text-7xl font-cinzel font-bold text-ink-gold mb-6 text-shadow-medieval">
+            <h1 className="text-7xl font-cinzel font-bold text-dnd-gold mb-6 text-shadow-medieval">
               SalaSpell Helper
             </h1>
             <div className="w-32 h-1 bg-dnd-gold mx-auto mb-6"></div>
           </div>
           
           <div className="parchment scroll-border rounded-lg p-8 transform rotate-[0.5deg]">
-            <p className="text-xl font-medieval text-ink-gold-soft">
+            <p className="text-xl font-medieval text-dnd-gold">
               Filter and discover spells by class, level, and source books
             </p>
           </div>

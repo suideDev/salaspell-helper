@@ -23,8 +23,8 @@ export default function ClassSelector({ selectedClass, onClassChange }: ClassSel
               onClick={() => onClassChange(selectedClass === cls.index ? '' : cls.index)}
               className={`px-4 py-2 rounded-md font-cinzel font-semibold text-sm transition-all border ${
                 selectedClass === cls.index
-                  ? 'bg-red-900 text-ink-gold shadow-md text-shadow-medieval border-red-800'
-                  : 'bg-parchment-old-dark text-ink-gold-soft border-amber-800 hover:bg-amber-900 hover:text-ink-gold'
+                  ? 'bg-red-900 text-dnd-gold shadow-md text-shadow-medieval border-red-800'
+                  : 'bg-parchment-old-dark text-dnd-gold border-amber-800 hover:bg-amber-900 hover:text-dnd-gold'
               }`}
             >
               {cls.name}
