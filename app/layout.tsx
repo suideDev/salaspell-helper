@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${medieval.variable}`}>
+    <html lang="en" className={`${cinzel.variable} ${medieval.variable} dark`}>
       <body>{children}</body>
     </html>
   )

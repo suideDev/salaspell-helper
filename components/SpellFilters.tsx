@@ -23,18 +23,18 @@ export default function SpellFilters({
 }: SpellFiltersProps) {
   return (
     <div className="parchment scroll-border rounded-lg p-6 space-y-6">
-      <h2 className="text-2xl font-cinzel font-bold text-dnd-red mb-4 text-center border-b-2 border-dnd-brown pb-2">
+      <h2 className="text-2xl font-cinzel font-bold text-dnd-gold mb-4 text-center border-b-2 border-amber-800 pb-2">
         Filter Spells
       </h2>
       
       <div>
-        <label className="block text-sm font-cinzel font-semibold text-dnd-brown mb-2">
+        <label className="block text-sm font-cinzel font-semibold text-amber-300 mb-2">
           Class
         </label>
         <select
           value={selectedClass}
           onChange={(e) => onClassChange(e.target.value)}
-          className="w-full px-4 py-2 rounded-lg bg-parchment-old text-amber-900 border-2 border-dnd-brown focus:border-dnd-red focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
+          className="w-full px-4 py-2 rounded-lg bg-parchment-old-dark text-amber-200 border-2 border-amber-800 focus:border-dnd-gold focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
         >
           <option value="">All Classes</option>
           {classes.map((cls) => (
@@ -46,13 +46,13 @@ export default function SpellFilters({
       </div>
 
       <div>
-        <label className="block text-sm font-cinzel font-semibold text-dnd-brown mb-2">
+        <label className="block text-sm font-cinzel font-semibold text-amber-300 mb-2">
           Maximum Spell Level
         </label>
         <select
           value={selectedLevel}
           onChange={(e) => onLevelChange(Number(e.target.value))}
-          className="w-full px-4 py-2 rounded-lg bg-parchment-old text-amber-900 border-2 border-dnd-brown focus:border-dnd-red focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
+          className="w-full px-4 py-2 rounded-lg bg-parchment-old-dark text-amber-200 border-2 border-amber-800 focus:border-dnd-gold focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
         >
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => (
             <option key={level} value={level}>
@@ -63,22 +63,22 @@ export default function SpellFilters({
       </div>
 
       <div>
-        <label className="block text-sm font-cinzel font-semibold text-dnd-brown mb-2">
+        <label className="block text-sm font-cinzel font-semibold text-amber-300 mb-2">
           Source Books (Select books you own)
         </label>
         <div className="space-y-2 max-h-64 overflow-y-auto pr-2">
           {SOURCE_BOOKS.map((book) => (
             <label
               key={book.id}
-              className="flex items-center space-x-2 cursor-pointer hover:bg-parchment-old p-2 rounded border border-transparent hover:border-dnd-brown transition-colors"
+              className="flex items-center space-x-2 cursor-pointer hover:bg-parchment-old-dark p-2 rounded border border-transparent hover:border-amber-800 transition-colors"
             >
               <input
                 type="checkbox"
                 checked={selectedSources.includes(book.id)}
                 onChange={() => onSourceToggle(book.id)}
-                className="w-4 h-4 text-dnd-red bg-parchment-old border-dnd-brown rounded focus:ring-dnd-gold accent-dnd-red"
+                className="w-4 h-4 text-dnd-gold bg-parchment-old-dark border-amber-800 rounded focus:ring-dnd-gold accent-dnd-gold"
               />
-              <span className="text-sm font-medieval text-amber-900">
+              <span className="text-sm font-medieval text-amber-200">
                 {book.name} ({book.abbreviation})
               </span>
             </label>

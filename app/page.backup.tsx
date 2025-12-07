@@ -106,16 +106,16 @@ export default function Home() {
 
   return (
     <PasswordProtection>
-      <div className="min-h-screen bg-gradient-to-br from-amber-950 via-red-950 to-amber-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-black">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
           <div className="text-center mb-8">
             <div className="parchment scroll-border rounded-lg p-6 inline-block transform rotate-[-0.5deg]">
-              <h1 className="text-5xl font-cinzel font-bold text-dnd-red mb-2 text-shadow-medieval">
+              <h1 className="text-5xl font-cinzel font-bold text-dnd-gold mb-2 text-shadow-medieval">
                 SalaSpell Helper
               </h1>
-              <div className="w-32 h-1 bg-dnd-red mx-auto mb-2"></div>
-              <p className="font-medieval text-amber-900 text-lg">
+              <div className="w-32 h-1 bg-dnd-gold mx-auto mb-2"></div>
+              <p className="font-medieval text-dnd-gold text-lg">
                 Filter and discover spells by class, level, and source books
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function Home() {
                     placeholder="Search spells by name, description, or school..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg bg-parchment-old text-amber-900 placeholder-amber-700 border-2 border-dnd-brown focus:border-dnd-red focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
+                    className="w-full px-4 py-3 rounded-lg bg-parchment-old-dark text-amber-200 placeholder-amber-500 border-2 border-amber-800 focus:border-dnd-gold focus:outline-none focus:ring-2 focus:ring-dnd-gold font-medieval"
                   />
                 </div>
 
@@ -162,7 +162,7 @@ export default function Home() {
                       </h2>
                       <button
                         onClick={() => setShowRecommended(false)}
-                        className="text-sm font-medieval text-amber-200 hover:text-dnd-gold transition-colors"
+                        className="text-sm font-medieval text-amber-300 hover:text-dnd-gold transition-colors"
                       >
                         Hide
                       </button>
@@ -195,7 +195,7 @@ export default function Home() {
                 </div>
 
                 {filteredSpells.length === 0 ? (
-                  <div className="text-center text-amber-200 py-20 font-medieval text-lg">
+                  <div className="text-center text-amber-300 py-20 font-medieval text-lg">
                     No spells found matching your criteria.
                   </div>
                 ) : (
