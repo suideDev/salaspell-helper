@@ -1,10 +1,12 @@
 'use client'
 
 import ClassSelector from '@/components/ClassSelector'
+import LevelSelector from '@/components/LevelSelector'
 import { useState } from 'react'
 
 export default function BardPage() {
   const [selectedClass, setSelectedClass] = useState('bard')
+  const [selectedLevel, setSelectedLevel] = useState(1)
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden paper-texture">
@@ -18,8 +20,8 @@ export default function BardPage() {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 border-4 border-amber-800 rotate-45"></div>
       </div>
       
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-8" style={{ zIndex: 2 }}>
-        <div className="text-center max-w-4xl w-full">
+      <div className="relative z-10 flex flex-col items-center min-h-screen p-8 pt-24" style={{ zIndex: 2 }}>
+        <div className="text-center max-w-6xl w-full">
           <div className="parchment scroll-border rounded-lg p-12 mb-8 transform rotate-[-0.5deg]">
             <h1 className="text-7xl font-cinzel font-bold text-dnd-gold mb-6 text-shadow-medieval">
               Bard
@@ -27,9 +29,11 @@ export default function BardPage() {
             <div className="w-32 h-1 bg-dnd-gold mx-auto mb-6"></div>
           </div>
           
+          <LevelSelector selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
+          
           <div className="parchment scroll-border rounded-lg p-8 transform rotate-[0.5deg]">
             <p className="text-xl font-cinzel text-dnd-gold">
-              Content coming soon...
+              Level {selectedLevel} - Content coming soon...
             </p>
           </div>
         </div>
